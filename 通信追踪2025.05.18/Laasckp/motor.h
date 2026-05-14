@@ -1,40 +1,33 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __MOTOR_H_
 #define __MOTOR_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-extern int left_speed_duty;     //×ó±ßµç»úPWM
-extern int right_speed_duty;   //ÓÒ±ßµç»úPWM
-extern unsigned char move_rec_flag;  //µç»úÇı¶¯±êÖ¾Î»
-extern unsigned char stop_display_flag;  //ÔİÍ£ÏÔÊ¾±êÖ¾Î»
-extern unsigned char Time_10us_motor; //10us¼ÆÊıÆ÷£¬×÷Îªµç»úÇı¶¯µÄ»ù±¾¼ÆÊıÆ÷
-extern unsigned int speed_count;        //Õ¼¿Õ±È¼ÆÊıÆ÷ 100´ÎÒ»ÖÜÆÚ
+extern int left_speed_duty;     //å·¦è¾¹ç”µæœºPWM
+extern int right_speed_duty;   //å³è¾¹ç”µæœºPWM
+extern unsigned char move_rec_flag;  //ç”µæœºé©±åŠ¨æ ‡å¿—ä½
+extern unsigned char stop_display_flag;  //æš‚åœæ˜¾ç¤ºæ ‡å¿—ä½
+extern unsigned char Time_10us_motor; //10usè®¡æ•°å™¨ï¼Œä½œä¸ºç”µæœºé©±åŠ¨çš„åŸºæœ¬è®¡æ•°å™¨
+extern unsigned int speed_count;        //å ç©ºæ¯”è®¡æ•°å™¨ 100æ¬¡ä¸€å‘¨æœŸ
 extern float sound_Kp,sound_Ki,sound_Kd;
 extern int sound_pwm;
-void CarMove(void);               //µç»úÇı¶¯º¯Êı
-void CarGo(void);                //³µÇ°½ø
-void CarBack(void);             //³µºóÍË
-void CarLeft(void);            //³µ×ó×ª
-void CarRight(void);          //³µÓÒ×ª
-void CarStop(void);          //³µ»¬ĞĞÔİÍ£ µç»úÇı¶¯Ğ¾Æ¬ÎªĞİÃß×´Ì¬¡£
-void Car_Brake(void);       //³µÉ²³µÔİÍ£
-void motor_init(void);     //µç»úÇı¶¯³õÊ¼»¯
-void CarBack_Trailing(void);                //µç»úÑ­¼£ºóÍË
-void CarLeft_Trailing(void);                //µç»úÑ­¼£×ó×ª
-void CarRight_Trailing(void);               //µç»úÑ­¼£ºóÍË
-void CarBack_obstacle_avoidance(void);      //µç»ú±ÜÕÏºóÍË
-void CarLeft_obstacle_avoidance(void);      //µç»ú±ÜÕÏ×ó×ª
-void CarRight_obstacle_avoidance(void);    //µç»ú±ÜÕÏÓÒ×ª
-void stop_display_execute(void);           //µç»úÔİÍ£ÏÔÊ¾Ö´ĞĞº¯Êı
+void CarMove(void);               //ç”µæœºé©±åŠ¨å‡½æ•°
+void CarGo(void);                //è½¦å‰è¿›
+void CarBack(void);             //è½¦åé€€
+void CarLeft(void);            //è½¦å·¦è½¬
+void CarRight(void);          //è½¦å³è½¬
+void CarStop(void);          //è½¦æ»‘è¡Œæš‚åœ ç”µæœºé©±åŠ¨èŠ¯ç‰‡ä¸ºä¼‘çœ çŠ¶æ€ã€‚
+void Car_Brake(void);       //è½¦åˆ¹è½¦æš‚åœ
+void motor_init(void);     //ç”µæœºé©±åŠ¨åˆå§‹åŒ–
+void CarBack_Trailing(void);                //ç”µæœºå¾ªè¿¹åé€€
+void CarLeft_Trailing(void);                //ç”µæœºå¾ªè¿¹å·¦è½¬
+void CarRight_Trailing(void);               //ç”µæœºå¾ªè¿¹åé€€
+void CarBack_obstacle_avoidance(void);      //ç”µæœºé¿éšœåé€€
+void CarLeft_obstacle_avoidance(void);      //ç”µæœºé¿éšœå·¦è½¬
+void CarRight_obstacle_avoidance(void);    //ç”µæœºé¿éšœå³è½¬
+void stop_display_execute(void);           //ç”µæœºæš‚åœæ˜¾ç¤ºæ‰§è¡Œå‡½æ•°
 int sound_PID(int angle,int TargetVelocity);
 #endif
 
