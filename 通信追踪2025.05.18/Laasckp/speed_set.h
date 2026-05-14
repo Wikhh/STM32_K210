@@ -1,24 +1,17 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __SPEED_SET_H_
 #define __SPEED_SET_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-void speed_and(void);                           //Ğ¡³µËÙ¶È¼ÓÔËËãº¯Êı
-void speed_subtract(void);                     //Ğ¡³µËÙ¶È¼õÔËËãº¯Êı
-void speed_set_display_execute(void);         //Ğ¡³µËÙ¶ÈÉèÖÃÏÔÊ¾ºÍÖ´ĞĞº¯Êı
+void speed_and(void);                           //å°è½¦é€Ÿåº¦åŠ è¿ç®—å‡½æ•°
+void speed_subtract(void);                     //å°è½¦é€Ÿåº¦å‡è¿ç®—å‡½æ•°
+void speed_set_display_execute(void);         //å°è½¦é€Ÿåº¦è®¾ç½®æ˜¾ç¤ºå’Œæ‰§è¡Œå‡½æ•°
 
-extern unsigned char sudu;                  //Ğ¡³µÉèÖÃËÙ¶È±äÁ¿
-extern unsigned char speed_and_flag;       //Ğ¡³µËÙ¶È¼Ó±êÖ¾Î»
-extern unsigned char speed_subtract_flag; //Ğ¡³µËÙ¶È¼õ±êÖ¾Î»
+extern unsigned char sudu;                  //å°è½¦è®¾ç½®é€Ÿåº¦å˜é‡
+extern unsigned char speed_and_flag;       //å°è½¦é€Ÿåº¦åŠ æ ‡å¿—ä½
+extern unsigned char speed_subtract_flag; //å°è½¦é€Ÿåº¦å‡æ ‡å¿—ä½
 
 
 #endif
