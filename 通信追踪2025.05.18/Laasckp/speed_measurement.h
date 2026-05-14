@@ -1,38 +1,31 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __SPEED_MEASUREMENT_H_
 #define __SPEED_MEASUREMENT_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-#define FOSC 48000000L //¾§ÕñÉèÖÃ£¬Ê¹ÓÃ24M Hz 6TË«ËÙ±¶Ä£Ê½
+#define FOSC 48000000L //æ™¶æŒ¯è®¾ç½®ï¼Œä½¿ç”¨24M Hz 6TåŒé€Ÿå€æ¨¡å¼
 
 
-extern unsigned char speed_measurement_flag;     //ËÙ¶È²âÁ¿±êÖ¾Î»
-extern unsigned char speed_measurement_display_flag; //ËÙ¶È²âÁ¿ÏÔÊ¾±êÖ¾Î»
-extern unsigned char total_distance_flag;//×ÜÀï³Ì²âÁ¿±êÖ¾Î»
-extern unsigned char total_distance_display_flag;//×ÜÀï³Ì²âÁ¿ÏÔÊ¾±êÖ¾Î»
-extern unsigned char speed_stop;//²âËÙ£¬×ÜÀï³Ì²âÁ¿¿ªÊ¼ÔİÍ£±äÁ¿
+extern unsigned char speed_measurement_flag;     //é€Ÿåº¦æµ‹é‡æ ‡å¿—ä½
+extern unsigned char speed_measurement_display_flag; //é€Ÿåº¦æµ‹é‡æ˜¾ç¤ºæ ‡å¿—ä½
+extern unsigned char total_distance_flag;//æ€»é‡Œç¨‹æµ‹é‡æ ‡å¿—ä½
+extern unsigned char total_distance_display_flag;//æ€»é‡Œç¨‹æµ‹é‡æ˜¾ç¤ºæ ‡å¿—ä½
+extern unsigned char speed_stop;//æµ‹é€Ÿï¼Œæ€»é‡Œç¨‹æµ‹é‡å¼€å§‹æš‚åœå˜é‡
 
-extern unsigned int  count_1ms;    //²âÁ¿Ê±¼ä
-extern unsigned int  speed_variate;//Ğ¡³µËÙ¶È¼ÆËã±äÁ¿
-extern unsigned int  speed_io;  //IO±ä»¯´ÎÊı
-extern unsigned int  speed_10us;        //10us¼ÆËã£¬×÷ÎªÉèÖÃËÙ¶ÈµÄ»ù±¾¼ÆËãÆ÷
-extern unsigned int  speed_io_contrast;//IOµçÆ½±ä»¯±È½Ï
-extern unsigned int  total_distance_variate;//×ÜÀï³Ì²âÁ¿±äÁ¿
+extern unsigned int  count_1ms;    //æµ‹é‡æ—¶é—´
+extern unsigned int  speed_variate;//å°è½¦é€Ÿåº¦è®¡ç®—å˜é‡
+extern unsigned int  speed_io;  //IOå˜åŒ–æ¬¡æ•°
+extern unsigned int  speed_10us;        //10usè®¡ç®—ï¼Œä½œä¸ºè®¾ç½®é€Ÿåº¦çš„åŸºæœ¬è®¡ç®—å™¨
+extern unsigned int  speed_io_contrast;//IOç”µå¹³å˜åŒ–æ¯”è¾ƒ
+extern unsigned int  total_distance_variate;//æ€»é‡Œç¨‹æµ‹é‡å˜é‡
 
-void measure_init(void);//ËÙ¶ÈÒı½Å³õÊ¼»¯
-void measure_speed(void);//º¯Êı¹¦ÄÜ £ºËÙ¶È²âÁ¿£¬¼ÆËãIO±ä»¯´ÎÊı ËÙ¶È²âÁ¿
-void speed_measurement_display_execute(void);//ËÙ¶È²âÁ¿ÏÔÊ¾ºÍÖ´ĞĞº¯Êı
-void total_distance(void);//×ÜÀï³Ì²âÁ¿º¯Êı
-void total_distance_display_execute(void);//×ÜÀï³Ì²âÁ¿ÏÔÊ¾ºÍÖ´ĞĞº¯Êı
+void measure_init(void);//é€Ÿåº¦å¼•è„šåˆå§‹åŒ–
+void measure_speed(void);//å‡½æ•°åŠŸèƒ½ ï¼šé€Ÿåº¦æµ‹é‡ï¼Œè®¡ç®—IOå˜åŒ–æ¬¡æ•° é€Ÿåº¦æµ‹é‡
+void speed_measurement_display_execute(void);//é€Ÿåº¦æµ‹é‡æ˜¾ç¤ºå’Œæ‰§è¡Œå‡½æ•°
+void total_distance(void);//æ€»é‡Œç¨‹æµ‹é‡å‡½æ•°
+void total_distance_display_execute(void);//æ€»é‡Œç¨‹æµ‹é‡æ˜¾ç¤ºå’Œæ‰§è¡Œå‡½æ•°
 
 #endif
 
