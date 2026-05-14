@@ -1,20 +1,13 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __Delay_H_
 #define __Delay_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-void delay_init(void);    // ÑÓÊ±º¯Êı³õÊ¼»¯             
-void delay_ms(u32 Nms);   //ºÁÃëÑÓÊ±º¯Êı
-void delay_us(u32 Nus); //Î¢ÃëÑÓÊ±º¯Êı
+void delay_init(void);    // å»¶æ—¶å‡½æ•°åˆå§‹åŒ–             
+void delay_ms(u32 Nms);   //æ¯«ç§’å»¶æ—¶å‡½æ•°
+void delay_us(u32 Nus); //å¾®ç§’å»¶æ—¶å‡½æ•°
 
 #endif
 
