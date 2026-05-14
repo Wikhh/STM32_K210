@@ -1,24 +1,16 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
-
 #ifndef __IRCTROL_H_
 #define __IRCTROL_H_
 
-#include "interface.h" //IO¿Ú¶¨ÒåÍ·ÎÄ¼ş
+#include "interface.h" //IOå£å®šä¹‰å¤´æ–‡ä»¶
 
-extern unsigned char ir_rec_flag;   //½ÓÊÕÊı¾İ±êÖ¾Î» 1 ÓĞĞÂÊı¾İ 0 Ã»ÓĞ
-extern unsigned char continue_time;//Í£³µÊ±¼ä
-extern unsigned char IRCOM[4];    //´¢´æºìÍâÒ£¿Ø·¢ÉäÊı¾İ
+extern unsigned char ir_rec_flag;   //æ¥æ”¶æ•°æ®æ ‡å¿—ä½ 1 æœ‰æ–°æ•°æ® 0 æ²¡æœ‰
+extern unsigned char continue_time;//åœè½¦æ—¶é—´
+extern unsigned char IRCOM[4];    //å‚¨å­˜çº¢å¤–é¥æ§å‘å°„æ•°æ®
 
-extern char IrDA;//ºìÍâÖµ
+extern char IrDA;//çº¢å¤–å€¼
 
-void IRCtrolInit(void);          //Íâ²¿ÖĞ¶ÏÅäÖÃ ºìÍâÒ£¿ØÅäÖÃ
-void IRIntIsr(void);            //ºìÍâÒ£¿Ø·¢ÉäÊı¾İ½âÂë
+void IRCtrolInit(void);          //å¤–éƒ¨ä¸­æ–­é…ç½® çº¢å¤–é¥æ§é…ç½®
+void IRIntIsr(void);            //çº¢å¤–é¥æ§å‘å°„æ•°æ®è§£ç 
 
 #endif
