@@ -1,78 +1,71 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __INTERFACE_H_
 #define __INTERFACE_H_
 
-#include "stm32f10x.h"                       //STM32F10xÏµÁĞÖØÒªÍ·ÎÄ¼ş
-#include "sys.h"                            //STM32µÄIO¿ÚÊäÈëºê¶¨ÒåºÍÊä³öºê¶¨Òå
-#include "IRCtrol.h"                       //ºìÍâÒ£¿ØÍ·ÎÄ¼ş
-#include "motor.h"                        //µç»úÇı¶¯Í·ÎÄ¼ş
-#include "oled_iic.h"                    //OLEDÏÔÊ¾ÆÁÇı¶¯Í·ÎÄ¼ş
-#include "speed_set.h"                  //ËÙ¶ÈÉèÖÃÍ·ÎÄ¼ş
-#include "search.h"                    //ºìÍâÑ­¼£Í·ÎÄ¼ş
-#include "Obstacle_Avoidance.h"       //ºìÍâ±ÜÕÏÍ·ÎÄ¼ş
-#include "speed_measurement.h"       //ËÙ¶È²âÁ¿Í·ÎÄ¼ş
-#include "Delay.h"                  //ÑÓÊ±º¯ÊıÍ·ÎÄ¼ş
-#include "uart.h"                  //´®¿ÚÍ·ÎÄ¼ş
-#include "led.h"                  //ledÍ·ÎÄ¼ş
-#include "timer.h"               //¶¨Ê±Æ÷Í·ÎÄ¼ş
-#include "steering_engine.h"    //¶æ»úÍ·ÎÄ¼ş
-#include "ultrasonic.h"        //³¬Éù²¨Í·ÎÄ¼ş
-#include "buzzer.h"           //·äÃùÆ÷Í·ÎÄ¼ş
-#include "adc.h"             //adcÍ·ÎÄ¼ş
-#include "battery_voltage.h"//µç³ØµçÑ¹²âÁ¿Í·ÎÄ¼ş
+#include "stm32f10x.h"                       //STM32F10xç³»åˆ—é‡è¦å¤´æ–‡ä»¶
+#include "sys.h"                            //STM32çš„IOå£è¾“å…¥å®å®šä¹‰å’Œè¾“å‡ºå®å®šä¹‰
+#include "IRCtrol.h"                       //çº¢å¤–é¥æ§å¤´æ–‡ä»¶
+#include "motor.h"                        //ç”µæœºé©±åŠ¨å¤´æ–‡ä»¶
+#include "oled_iic.h"                    //OLEDæ˜¾ç¤ºå±é©±åŠ¨å¤´æ–‡ä»¶
+#include "speed_set.h"                  //é€Ÿåº¦è®¾ç½®å¤´æ–‡ä»¶
+#include "search.h"                    //çº¢å¤–å¾ªè¿¹å¤´æ–‡ä»¶
+#include "Obstacle_Avoidance.h"       //çº¢å¤–é¿éšœå¤´æ–‡ä»¶
+#include "speed_measurement.h"       //é€Ÿåº¦æµ‹é‡å¤´æ–‡ä»¶
+#include "Delay.h"                  //å»¶æ—¶å‡½æ•°å¤´æ–‡ä»¶
+#include "uart.h"                  //ä¸²å£å¤´æ–‡ä»¶
+#include "led.h"                  //ledå¤´æ–‡ä»¶
+#include "timer.h"               //å®šæ—¶å™¨å¤´æ–‡ä»¶
+#include "steering_engine.h"    //èˆµæœºå¤´æ–‡ä»¶
+#include "ultrasonic.h"        //è¶…å£°æ³¢å¤´æ–‡ä»¶
+#include "buzzer.h"           //èœ‚é¸£å™¨å¤´æ–‡ä»¶
+#include "adc.h"             //adcå¤´æ–‡ä»¶
+#include "battery_voltage.h"//ç”µæ± ç”µå‹æµ‹é‡å¤´æ–‡ä»¶
 
 
-#include "uart2.h"     //½ÓÊÕK210Êı¾İËùÓÃµ½µÄ´®¿Ú
+#include "uart2.h"     //æ¥æ”¶K210æ•°æ®æ‰€ç”¨åˆ°çš„ä¸²å£
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-void GPIO_clock_init(void);//GPIOÊ±ÖÓ³õÊ¼»¯
-void all_init(void);     //ËùÓĞÏëÒª³õÊ¼»¯µÄº¯Êı	
-void decode_choice(void);//ºìÍâ£¬À¶ÑÀ£¬½âÂëÑ¡Ôñº¯Êı
-void stop_choice(void); ///µç»úÍ£Ö¹£¬ledÉÁË¸º¯Êı
+void GPIO_clock_init(void);//GPIOæ—¶é’Ÿåˆå§‹åŒ–
+void all_init(void);     //æ‰€æœ‰æƒ³è¦åˆå§‹åŒ–çš„å‡½æ•°	
+void decode_choice(void);//çº¢å¤–ï¼Œè“ç‰™ï¼Œè§£ç é€‰æ‹©å‡½æ•°
+void stop_choice(void); ///ç”µæœºåœæ­¢ï¼Œledé—ªçƒå‡½æ•°
 
-//¶¨ÒåOLEDÏÔÊ¾ÆÁ
-//¶¨ÒåIIC×ÜÏßÁ¬½ÓµÄGPIO¶Ë¿Ú, ÓÃ»§Ö»ĞèÒªĞŞ¸ÄÏÂÃæ´úÂë¼´¿ÉÈÎÒâ¸Ä±äSCLºÍSDAµÄÒı½Å
-#define OLED_SCL PBout(7)  //SCLÒı½Å
-#define OLED_SDA PBout(6)  //SDAÒı½Å
+//å®šä¹‰OLEDæ˜¾ç¤ºå±
+//å®šä¹‰IICæ€»çº¿è¿æ¥çš„GPIOç«¯å£, ç”¨æˆ·åªéœ€è¦ä¿®æ”¹ä¸‹é¢ä»£ç å³å¯ä»»æ„æ”¹å˜SCLå’ŒSDAçš„å¼•è„š
+#define OLED_SCL PBout(7)  //SCLå¼•è„š
+#define OLED_SDA PBout(6)  //SDAå¼•è„š
 
-#define OLED_SCL_GPIO_PORT	  GPIOB			/* GPIO¶Ë¿Ú */
-#define OLED_SCL_RCC 	      RCC_APB2Periph_GPIOB		/* GPIO¶Ë¿ÚÊ±ÖÓ */
-#define OLED_SCL_PIN		  GPIO_Pin_7			/* Á¬½Óµ½SCLÊ±ÖÓÏßµÄGPIO */
+#define OLED_SCL_GPIO_PORT	  GPIOB			/* GPIOç«¯å£ */
+#define OLED_SCL_RCC 	      RCC_APB2Periph_GPIOB		/* GPIOç«¯å£æ—¶é’Ÿ */
+#define OLED_SCL_PIN		  GPIO_Pin_7			/* è¿æ¥åˆ°SCLæ—¶é’Ÿçº¿çš„GPIO */
 
-#define OLED_SDA_GPIO_PORT	  GPIOB			/* GPIO¶Ë¿Ú */
-#define OLED_SDA_RCC 	      RCC_APB2Periph_GPIOB		/* GPIO¶Ë¿ÚÊ±ÖÓ */
-#define OLED_SDA_PIN		  GPIO_Pin_6			/* Á¬½Óµ½SDAÊı¾İÏßµÄGPIO */
+#define OLED_SDA_GPIO_PORT	  GPIOB			/* GPIOç«¯å£ */
+#define OLED_SDA_RCC 	      RCC_APB2Periph_GPIOB		/* GPIOç«¯å£æ—¶é’Ÿ */
+#define OLED_SDA_PIN		  GPIO_Pin_6			/* è¿æ¥åˆ°SDAæ•°æ®çº¿çš„GPIO */
 
-// LED PA11 ºìÉ«
+// LED PA11 çº¢è‰²
 #define LED_PIN_0         GPIO_Pin_5
 #define LED_GPIO_0        GPIOA
 #define LED_SET_0         GPIO_SetBits(LED_GPIO_0 , LED_PIN_0)
 #define LED_RESET_0       GPIO_ResetBits(LED_GPIO_0 , LED_PIN_0)
 
-// LED PA8  ÂÌÉ«
+// LED PA8  ç»¿è‰²
 #define LED_PIN_1         GPIO_Pin_8
 #define LED_GPIO_1        GPIOA
 #define LED_SET_1         GPIO_SetBits(LED_GPIO_1 , LED_PIN_1)
 #define LED_RESET_1       GPIO_ResetBits(LED_GPIO_1 , LED_PIN_1)
 
-// LED PB13  À¶É«
+// LED PB13  è“è‰²
 #define LED_PIN_2         GPIO_Pin_13
 #define LED_GPIO_2        GPIOB
 #define LED_SET_2         GPIO_SetBits(LED_GPIO_2 , LED_PIN_2)
 #define LED_RESET_2       GPIO_ResetBits(LED_GPIO_2 , LED_PIN_2)
 
 
-//ºìÍâÒ£¿Ø ºìÍâ½ÓÊÕÆ÷Êı¾İÏß,Íâ²¿ÖĞ¶Ï PB12
+//çº¢å¤–é¥æ§ çº¢å¤–æ¥æ”¶å™¨æ•°æ®çº¿,å¤–éƒ¨ä¸­æ–­ PB12
 #define IRIN_PIN         GPIO_Pin_12
 #define IRIN_GPIO        GPIOB
 #define IRIN_PORTSOURCE  GPIO_PortSourceGPIOB
@@ -110,24 +103,24 @@ void stop_choice(void); ///µç»úÍ£Ö¹£¬ledÉÁË¸º¯Êı
 #define RIGHT_Z_RESET        GPIO_ResetBits( RIGHT_Z_GPIO , RIGHT_Z_PIN)
 
 
-//×ó±ßµç»ú
-#define LEFT_GO     LEFT_F_SET;   LEFT_Z_RESET  //Ç°½ø
-#define LEFT_BACK   LEFT_F_RESET; LEFT_Z_SET   //ºóÍË
-#define LEFT_STOP   LEFT_F_RESET; LEFT_Z_RESET//Í£Ö¹
-#define LEFT_BRAKE  LEFT_F_SET;   LEFT_Z_SET //É²³µ
+//å·¦è¾¹ç”µæœº
+#define LEFT_GO     LEFT_F_SET;   LEFT_Z_RESET  //å‰è¿›
+#define LEFT_BACK   LEFT_F_RESET; LEFT_Z_SET   //åé€€
+#define LEFT_STOP   LEFT_F_RESET; LEFT_Z_RESET//åœæ­¢
+#define LEFT_BRAKE  LEFT_F_SET;   LEFT_Z_SET //åˆ¹è½¦
 
-//ÓÒ±ßµç»ú
-#define RIGHT_GO    RIGHT_F_SET;  RIGHT_Z_RESET   //Ç°½ø
-#define RIGHT_BACK  RIGHT_F_RESET;RIGHT_Z_SET   //ºóÍË
-#define RIGHT_STOP  RIGHT_F_RESET;RIGHT_Z_RESET//Í£Ö¹
-#define RIGHT_BRAKE RIGHT_F_SET;  RIGHT_Z_SET //É²³µ
+//å³è¾¹ç”µæœº
+#define RIGHT_GO    RIGHT_F_SET;  RIGHT_Z_RESET   //å‰è¿›
+#define RIGHT_BACK  RIGHT_F_RESET;RIGHT_Z_SET   //åé€€
+#define RIGHT_STOP  RIGHT_F_RESET;RIGHT_Z_RESET//åœæ­¢
+#define RIGHT_BRAKE RIGHT_F_SET;  RIGHT_Z_SET //åˆ¹è½¦
 
 
-//ºìÍâÑ­¼£
+//çº¢å¤–å¾ªè¿¹
 /*
 
-×óÑ­¼£	SEARCH_L_PIN	PA1
-ÓÒÑ­¼£	SEARCH_R_PIN	PA0
+å·¦å¾ªè¿¹	SEARCH_L_PIN	PA1
+å³å¾ªè¿¹	SEARCH_R_PIN	PA0
 
  */
  
@@ -139,14 +132,14 @@ void stop_choice(void); ///µç»úÍ£Ö¹£¬ledÉÁË¸º¯Êı
 #define SEARCH_R_GPIO        GPIOA
 #define SEARCH_R_IO          GPIO_ReadInputDataBit(SEARCH_R_GPIO, SEARCH_R_PIN)
 
-#define BLACK_AREA 1        //¼ì²âµ½ºÚÏß
-#define WHITE_AREA 0        //Ã»ÓĞ¼ì²âµ½ºÚÏß
+#define BLACK_AREA 1        //æ£€æµ‹åˆ°é»‘çº¿
+#define WHITE_AREA 0        //æ²¡æœ‰æ£€æµ‹åˆ°é»‘çº¿
 
 
-//ºìÍâ±ÜÕÏ
+//çº¢å¤–é¿éšœ
 /* 
-×ó±ÜÕÏ	VOID_L_PIN	PB14
-ÓÒ±ÜÕÏ	VOID_R_PIN	PB15
+å·¦é¿éšœ	VOID_L_PIN	PB14
+å³é¿éšœ	VOID_R_PIN	PB15
  */
  
 #define VOID_L_PIN         GPIO_Pin_14
@@ -158,19 +151,19 @@ void stop_choice(void); ///µç»úÍ£Ö¹£¬ledÉÁË¸º¯Êı
 #define VOID_R_IO          GPIO_ReadInputDataBit(VOID_R_GPIO, VOID_R_PIN)
 
 
-#define BARRIER_Y 0  //ÓĞÕÏ°­Îï
-#define BARRIER_N 1  //ÎŞÕÏ°­Îï
+#define BARRIER_Y 0  //æœ‰éšœç¢ç‰©
+#define BARRIER_N 1  //æ— éšœç¢ç‰©
 
 
-//²âËÙ
+//æµ‹é€Ÿ
 /* 
-ËÙ¶ÈÂëÅÌ	coded_disc_PIN	PC13
+é€Ÿåº¦ç ç›˜	coded_disc_PIN	PC13
  */
 #define coded_disc_PIN         GPIO_Pin_13
 #define coded_disc_GPIO        GPIOC
 #define coded_disc_IO          GPIO_ReadInputDataBit(coded_disc_GPIO, coded_disc_PIN)
 
-//³¬Éù²¨¿ØÖÆ Íâ²¿ÖĞ¶Ï·µ»Ø PB9
+//è¶…å£°æ³¢æ§åˆ¶ å¤–éƒ¨ä¸­æ–­è¿”å› PB9
 #define Echo_PIN         GPIO_Pin_9
 #define Echo_GPIO        GPIOB
 #define Echo_PORTSOURCE  GPIO_PortSourceGPIOB
@@ -179,41 +172,41 @@ void stop_choice(void); ///µç»úÍ£Ö¹£¬ledÉÁË¸º¯Êı
 #define Echo_IRQCH       EXTI9_5_IRQn
 #define Echo             GPIO_ReadInputDataBit(Echo_GPIO, Echo_PIN)
 
-//´¥·¢IO PB8
+//è§¦å‘IO PB8
 #define Trig_PIN         GPIO_Pin_8
 #define Trig_GPIO        GPIOB
 #define Trig_RESET       GPIO_SetBits(Trig_GPIO , Trig_PIN)
-#define Trig_SET         GPIO_ResetBits(Trig_GPIO , Trig_PIN)//×öÁËÒ»´Î·´Ïà 
+#define Trig_SET         GPIO_ResetBits(Trig_GPIO , Trig_PIN)//åšäº†ä¸€æ¬¡åç›¸ 
 
-//¶æ»ú¿ØÖÆIO PB5
+//èˆµæœºæ§åˆ¶IO PB5
 #define Servo_PIN         GPIO_Pin_5
 #define Servo_GPIO        GPIOB
 #define Servo_SET         GPIO_SetBits(Servo_GPIO , Servo_PIN)
 #define Servo_RESET       GPIO_ResetBits(Servo_GPIO , Servo_PIN)
 
-//·äÃùÆ÷ PA12
+//èœ‚é¸£å™¨ PA12
 #define BUZZER_PIN        GPIO_Pin_12
 #define BUZZER_GPIO       GPIOA
 #define BUZZER_SET        GPIO_SetBits(BUZZER_GPIO , BUZZER_PIN)
 #define BUZZER_RESET      GPIO_ResetBits(BUZZER_GPIO , BUZZER_PIN)
 
-#define VOLTAGE_ADC1_CHx	ADC_Channel_4	//¶¨ÒåµçÑ¹²É¼¯ËùÔÚµÄADC1Í¨µÀ±àºÅ
+#define VOLTAGE_ADC1_CHx	ADC_Channel_4	//å®šä¹‰ç”µå‹é‡‡é›†æ‰€åœ¨çš„ADC1é€šé“ç¼–å·
 
-//ÔË¶¯Ö¸Áî¶¨Òå
-#define Car_Go    0x18//Ç°½ø ÉÏ¼ıÍ·¼ü
-#define Car_Back  0x52//ºóÍË ÏÂ¼ıÍ·¼ü
-#define Car_Left  0x08//×ó×ª ×ó¼ıÍ·¼ü
-#define Car_Right 0x5A//ºóÍË ÓÒ¼ıÍ·¼ü
-#define Car_Stop  0x1C//ÔİÍ£ ok¼ü	
+//è¿åŠ¨æŒ‡ä»¤å®šä¹‰
+#define Car_Go    0x18//å‰è¿› ä¸Šç®­å¤´é”®
+#define Car_Back  0x52//åé€€ ä¸‹ç®­å¤´é”®
+#define Car_Left  0x08//å·¦è½¬ å·¦ç®­å¤´é”®
+#define Car_Right 0x5A//åé€€ å³ç®­å¤´é”®
+#define Car_Stop  0x1C//æš‚åœ oké”®	
 
-#define Car_Obstacle_Avoidance  0x45 //Á½Â·ºìÍâ±ÜÕÏ        1¼ü
-#define Car_Search              0x46 //Á½Â·ºìÍâÑ­¼£        2¼ü
-#define Car_Speed_Measurement   0x47 //Ğ¡³µ²âËÙ            3¼ü
-#define Car_Ultrasonic          0x44 //³¬Éù²¨¶æ»úĞı×ª±ÜÕÏ  4¼ü
-#define Car_Buzzer              0x40 //·äÃùÆ÷              5¼ü	
-#define Car_Battery_Voltage     0x43 //µç³ØµçÑ¹²âÁ¿        6¼ü
-#define Car_Speed_And           0x16 //ËÙ¶È+               *¼ü	
-#define Car_Speed_Subtract      0x0D //ËÙ¶È-               #¼ü
+#define Car_Obstacle_Avoidance  0x45 //ä¸¤è·¯çº¢å¤–é¿éšœ        1é”®
+#define Car_Search              0x46 //ä¸¤è·¯çº¢å¤–å¾ªè¿¹        2é”®
+#define Car_Speed_Measurement   0x47 //å°è½¦æµ‹é€Ÿ            3é”®
+#define Car_Ultrasonic          0x44 //è¶…å£°æ³¢èˆµæœºæ—‹è½¬é¿éšœ  4é”®
+#define Car_Buzzer              0x40 //èœ‚é¸£å™¨              5é”®	
+#define Car_Battery_Voltage     0x43 //ç”µæ± ç”µå‹æµ‹é‡        6é”®
+#define Car_Speed_And           0x16 //é€Ÿåº¦+               *é”®	
+#define Car_Speed_Subtract      0x0D //é€Ÿåº¦-               #é”®
 				
 #endif
 
