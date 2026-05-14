@@ -1,24 +1,17 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __ULTRASONIC_H_
 #define __ULTRASONIC_H_
 #include "interface.h"
 
-extern unsigned char ultrasonic_flag;          //³¬Éù²¨¶æ»ú±ÜÕÏÖ´ĞĞ±êÖ¾Î»
-extern unsigned char ultrasonic_display_flag; //³¬Éù²¨¶æ»ú±ÜÕÏÏÔÊ¾±êÖ¾Î»
+extern unsigned char ultrasonic_flag;          //è¶…å£°æ³¢èˆµæœºé¿éšœæ‰§è¡Œæ ‡å¿—ä½
+extern unsigned char ultrasonic_display_flag; //è¶…å£°æ³¢èˆµæœºé¿éšœæ˜¾ç¤ºæ ‡å¿—ä½
 
-extern volatile unsigned int distance_cm;//µ±Ç°¾àÀë
+extern volatile unsigned int distance_cm;//å½“å‰è·ç¦»
 
-extern unsigned int dis_left;//×ó±ß¾àÀë
-extern unsigned int dis_right;//ÓÒ±ß¾àÀë
-extern unsigned int dis_direct;//Ç°·½¾àÀë
+extern unsigned int dis_left;//å·¦è¾¹è·ç¦»
+extern unsigned int dis_right;//å³è¾¹è·ç¦»
+extern unsigned int dis_direct;//å‰æ–¹è·ç¦»
 
 void UltraSoundInit(void);
 void GetDistanceDelay(void);
@@ -26,8 +19,8 @@ void Distance(void);
 void BarrierProc(void);
 void GetAllDistance(unsigned int *dis_left,unsigned int *dis_right,unsigned int *dis_direct);
 void Time4Init(void);
-void ultrasonic_init(void);                 //³¬Éù²¨³õÊ¼»¯º¯Êı
-void ultrasonic_execute(void);            //³¬Éù²¨¶æ»ú±ÜÕÏÖ´ĞĞº¯Êı
-void ultrasonic_display_execute(void);   //³¬Éù²¨¶æ»ú±ÜÕÏÏÔÊ¾ºÍÖ´ĞĞº¯Êı
+void ultrasonic_init(void);                 //è¶…å£°æ³¢åˆå§‹åŒ–å‡½æ•°
+void ultrasonic_execute(void);            //è¶…å£°æ³¢èˆµæœºé¿éšœæ‰§è¡Œå‡½æ•°
+void ultrasonic_display_execute(void);   //è¶…å£°æ³¢èˆµæœºé¿éšœæ˜¾ç¤ºå’Œæ‰§è¡Œå‡½æ•°
 
 #endif
