@@ -1,23 +1,16 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __TIMER_H_
 #define __TIMER_H_
 
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ é‡è¦
 
-void TIM2_Init(void);       //¶¨Ê±Æ÷2³õÊ¼»¯
-void TIM2_IRQHandler(void);//TIM2ÖĞ¶Ï´¦Àíº¯Êı£¬Ã¿10usÖĞ¶ÏÒ»´Î 
-static void NVIC_TIM2Configuration(void); //¶¨Ê±Æ÷2µÄÖĞ¶ÏÅäÖÃ
+void TIM2_Init(void);       //å®šæ—¶å™¨2åˆå§‹åŒ–
+void TIM2_IRQHandler(void);//TIM2ä¸­æ–­å¤„ç†å‡½æ•°ï¼Œæ¯10usä¸­æ–­ä¸€æ¬¡ 
+static void NVIC_TIM2Configuration(void); //å®šæ—¶å™¨2çš„ä¸­æ–­é…ç½®
 
-extern unsigned char Time_10us_sum ;    //10us¼ÆÊıÆ÷£¬×÷ÎªÖ÷º¯ÊıµÄ»ù±¾ÖÜÆÚ
-extern unsigned char Time_1ms ;        //1ms¼ÆÊıÆ÷£¬×÷Îª²¿·Öº¯ÊıµÄ»ù±¾ÖÜÆÚ
-extern unsigned char Time_5ms ;        //5ms¼ÆÊıÆ÷£¬×÷Îª²¿·Öº¯ÊıµÄ»ù±¾ÖÜÆÚ
+extern unsigned char Time_10us_sum ;    //10usè®¡æ•°å™¨ï¼Œä½œä¸ºä¸»å‡½æ•°çš„åŸºæœ¬å‘¨æœŸ
+extern unsigned char Time_1ms ;        //1msè®¡æ•°å™¨ï¼Œä½œä¸ºéƒ¨åˆ†å‡½æ•°çš„åŸºæœ¬å‘¨æœŸ
+extern unsigned char Time_5ms ;        //5msè®¡æ•°å™¨ï¼Œä½œä¸ºéƒ¨åˆ†å‡½æ•°çš„åŸºæœ¬å‘¨æœŸ
 #endif
