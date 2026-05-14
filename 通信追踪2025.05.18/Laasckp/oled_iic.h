@@ -1,23 +1,16 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __OLED_IIC_H
 #define	__OLED_IIC_H
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶
 #include "string.h"
 
-#define OLED_ADDRESS	0x78 //Ä¬ÈÏ0x78
+#define OLED_ADDRESS	0x78 //é»˜è®¤0x78
 
 
 
-#define OLED_IIC_SDA_READ()  GPIO_ReadInputDataBit(OLED_SDA_GPIO_PORT, OLED_SDA_PIN)	/* ¶ÁSDA¿ÚÏß×´Ì¬ */
+#define OLED_IIC_SDA_READ()  GPIO_ReadInputDataBit(OLED_SDA_GPIO_PORT, OLED_SDA_PIN)	/* è¯»SDAå£çº¿çŠ¶æ€ */
 
 extern unsigned int HZ;
 
