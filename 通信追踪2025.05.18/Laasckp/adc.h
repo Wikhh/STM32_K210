@@ -1,20 +1,13 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __ADC_H
 #define __ADC_H	
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª		  
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦		  
 
-u16  get_adc1(u8 ch);//µÃµ½ADC1Ä³¸öÍ¨µÀÖµ   
-u16  get_adc1_average(u8 adc1_chx);//µÃµ½adc1_chxÍ¨µÀVOLTAGE_TIME´Î²ÉÑùµÄÆ½¾ùÖµ
-void adc1_init(void);//ADC1³õÊ¼»¯
+u16  get_adc1(u8 ch);//å¾—åˆ°ADC1æŸä¸ªé€šé“å€¼   
+u16  get_adc1_average(u8 adc1_chx);//å¾—åˆ°adc1_chxé€šé“VOLTAGE_TIMEæ¬¡é‡‡æ ·çš„å¹³å‡å€¼
+void adc1_init(void);//ADC1åˆå§‹åŒ–
 
 #endif 
 
