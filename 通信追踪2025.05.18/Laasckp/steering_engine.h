@@ -1,20 +1,13 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __STEERING_ENGINE_H_
 #define __STEERING_ENGINE_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 void ServoInit(void);
 void DuojiMid(void);
 void DuojiRight(void);
 void DuojiLeft(void);
-extern unsigned int duoji_count;//ËÙ¶È¼Ó±äÁ¿
-extern unsigned int zhuanjiao;//ËÙ¶È¼õ±äÁ¿
+extern unsigned int duoji_count;//é€Ÿåº¦åŠ å˜é‡
+extern unsigned int zhuanjiao;//é€Ÿåº¦å‡å˜é‡
 #endif
