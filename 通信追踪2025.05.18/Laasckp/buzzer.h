@@ -1,24 +1,17 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __BUZZER_H_
 #define __BUZZER_H_
 
 
-#include "interface.h"//Ä£¿é½Ó¿Ú¶¨ÒåÍ·ÎÄ¼ş
+#include "interface.h"//æ¨¡å—æ¥å£å®šä¹‰å¤´æ–‡ä»¶
 
-extern unsigned char buzzer_flag;             //·äÃùÆ÷Ö´ĞĞ±êÖ¾Î»
-extern unsigned char buzzer_display_flag;    //·äÃùÆ÷ÏÔÊ¾±êÖ¾Î»
+extern unsigned char buzzer_flag;             //èœ‚é¸£å™¨æ‰§è¡Œæ ‡å¿—ä½
+extern unsigned char buzzer_display_flag;    //èœ‚é¸£å™¨æ˜¾ç¤ºæ ‡å¿—ä½
 
-void buzzer_init(void);                   //·äÃùÆ÷³õÊ¼»¯
-void buzzer_display_execute(void);       //·äÃùÆ÷ÏÔÊ¾Ö´ĞĞº¯Êı
-void buzzer_execute(uint16_t Buzzer);   //·äÃùÆ÷Ö´ĞĞº¯Êı
+void buzzer_init(void);                   //èœ‚é¸£å™¨åˆå§‹åŒ–
+void buzzer_display_execute(void);       //èœ‚é¸£å™¨æ˜¾ç¤ºæ‰§è¡Œå‡½æ•°
+void buzzer_execute(uint16_t Buzzer);   //èœ‚é¸£å™¨æ‰§è¡Œå‡½æ•°
 
 #endif
 
