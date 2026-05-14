@@ -1,23 +1,16 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __LED_H_
 #define __LED_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-extern unsigned char tick_200ms ;        //LEDÉÁË¸Ê±¼ä
+extern unsigned char tick_200ms ;        //LEDé—ªçƒæ—¶é—´
 
-void led_init(void);//ledµÆµÄ³õÊ¼»¯
-void led_colour_red(uint16_t led_red);     //LEDºìÉ«Çı¶¯º¯Êı
-void led_colour_green(uint16_t led_green);//LEDÂÌÉ«Çı¶¯º¯Êı
-void led_colour_blue(uint16_t led_blue);//LEDÀ¶É«Çı¶¯º¯Êı
+void led_init(void);//ledç¯çš„åˆå§‹åŒ–
+void led_colour_red(uint16_t led_red);     //LEDçº¢è‰²é©±åŠ¨å‡½æ•°
+void led_colour_green(uint16_t led_green);//LEDç»¿è‰²é©±åŠ¨å‡½æ•°
+void led_colour_blue(uint16_t led_blue);//LEDè“è‰²é©±åŠ¨å‡½æ•°
 
 
 
