@@ -1,23 +1,16 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __SEARCH_H_
 #define __SEARCH_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-extern unsigned char search_flag;             //ºìÍâÑ­¼£Ö´ĞĞ±êÖ¾Î»
-extern unsigned char search_display_flag;    //ºìÍâÑ­¼£ÏÔÊ¾ºÍÖ´ĞĞ±êÖ¾Î»
+extern unsigned char search_flag;             //çº¢å¤–å¾ªè¿¹æ‰§è¡Œæ ‡å¿—ä½
+extern unsigned char search_display_flag;    //çº¢å¤–å¾ªè¿¹æ˜¾ç¤ºå’Œæ‰§è¡Œæ ‡å¿—ä½
 
-void search_execute(void);                 //ºìÍâÑ­¼£º¯Êı
-void search_init(void);                   //ºìÍâÑ­¼£³õÊ¼»¯º¯Êı
-void search_display_execute(void);       //ºìÍâÑ­¼£ÏÔÊ¾ºÍÖ´ĞĞº¯Êı
+void search_execute(void);                 //çº¢å¤–å¾ªè¿¹å‡½æ•°
+void search_init(void);                   //çº¢å¤–å¾ªè¿¹åˆå§‹åŒ–å‡½æ•°
+void search_display_execute(void);       //çº¢å¤–å¾ªè¿¹æ˜¾ç¤ºå’Œæ‰§è¡Œå‡½æ•°
 
 #endif
 
