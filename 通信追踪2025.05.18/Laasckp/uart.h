@@ -1,20 +1,13 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __UART_H_
 #define __UART_H_
 
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-extern char BT ;//À¶ÑÀ¿ØÖÆÖ¸Áî
-extern unsigned char BT_flag;//À¶ÑÀ¿ØÖÆ±êÖ¾Î»
+extern char BT ;//è“ç‰™æ§åˆ¶æŒ‡ä»¤
+extern unsigned char BT_flag;//è“ç‰™æ§åˆ¶æ ‡å¿—ä½
 
 void USART3Conf(u32 baudRate);
 void PutChar(u8 Data);
