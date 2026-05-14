@@ -1,22 +1,15 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
 
 #ifndef __OBSTACLE_AVOIDANCE_H_
 #define __OBSTACLE_AVOIDANCE_H_
 
-#include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª
+#include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦
 
-extern unsigned char obstacle_avoidance_flag;          //ºìÍâ±ÜÕÏÖ´ĞĞ±êÖ¾Î»
-extern unsigned char obstacle_avoidance_display_flag; //ºìÍâ±ÜÕÏÏÔÊ¾±êÖ¾Î»
+extern unsigned char obstacle_avoidance_flag;          //çº¢å¤–é¿éšœæ‰§è¡Œæ ‡å¿—ä½
+extern unsigned char obstacle_avoidance_display_flag; //çº¢å¤–é¿éšœæ˜¾ç¤ºæ ‡å¿—ä½
 
-void obstacle_avoidance_detector(void);             //ºìÍâ±ÜÕÏ¼ì²âº¯Êı
-void obstacle_avoidance_init(void);                //ºìÍâ±ÜÕÏ³õÊ¼»¯
-void obstacle_avoidance_display_execute(void);   //ºìÍâ±ÜÕÏÏÔÊ¾ºÍÖ´ĞĞº¯Êı
+void obstacle_avoidance_detector(void);             //çº¢å¤–é¿éšœæ£€æµ‹å‡½æ•°
+void obstacle_avoidance_init(void);                //çº¢å¤–é¿éšœåˆå§‹åŒ–
+void obstacle_avoidance_display_execute(void);   //çº¢å¤–é¿éšœæ˜¾ç¤ºå’Œæ‰§è¡Œå‡½æ•°
 
 #endif
