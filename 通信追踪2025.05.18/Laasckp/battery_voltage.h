@@ -1,31 +1,25 @@
 
-/******************************************************
-  
-	ÌÔ±¦£ºLaasckp
-	ÏÌÓã£ºLaasckp
-  ËµÃ÷£º²¿·İÔ´ÂëÀ´Ô´ÍøÂç--ÇëÊÔÓÃ24Ğ¡Ê±ºóÉ¾³ı¡£
-			
-******************************************************/
+
 
 #ifndef __BATTERY_VOLTAGE_H
 #define __BATTERY_VOLTAGE_H	
 
- #include "interface.h"//IO¿Ú¶¨ÒåÍ·ÎÄ¼ş ºÜÖØÒª		  
+ #include "interface.h"//IOå£å®šä¹‰å¤´æ–‡ä»¶ å¾ˆé‡è¦		  
    
-extern unsigned char battery_voltage_flag;          //µç³ØµçÑ¹²âÁ¿±êÖ¾Î»
-extern unsigned char battery_voltage_display_flag; //µç³ØµçÑ¹ÏÔÊ¾±êÖ¾Î»
+extern unsigned char battery_voltage_flag;          //ç”µæ± ç”µå‹æµ‹é‡æ ‡å¿—ä½
+extern unsigned char battery_voltage_display_flag; //ç”µæ± ç”µå‹æ˜¾ç¤ºæ ‡å¿—ä½
 extern unsigned int battery_voltage_int;
 extern unsigned char battery_voltage_decimals;
-extern float battery_voltage;//µç³ØµçÑ¹±äÁ¿
+extern float battery_voltage;//ç”µæ± ç”µå‹å˜é‡
 
-void voltage_init(void); //µç³ØµçÑ¹Òı½Å²É¼¯Òı½Å³õÊ¼»¯
-void battery_voltage_display_execute(void);       //µç³ØµçÑ¹²âÁ¿º¯Êı
-void battery_voltage_execute(void);   //µç³ØµçÑ¹ÏÔÊ¾º¯Êı
-float get_battery_voltage(void);//µÃµ½µç³ØµÄµçÑ¹Öµ
+void voltage_init(void); //ç”µæ± ç”µå‹å¼•è„šé‡‡é›†å¼•è„šåˆå§‹åŒ–
+void battery_voltage_display_execute(void);       //ç”µæ± ç”µå‹æµ‹é‡å‡½æ•°
+void battery_voltage_execute(void);   //ç”µæ± ç”µå‹æ˜¾ç¤ºå‡½æ•°
+float get_battery_voltage(void);//å¾—åˆ°ç”µæ± çš„ç”µå‹å€¼
 
 
 	
-#define VOLTAGE_TIME	 20				//¶¨ÒåµçÑ¹²É¼¯¶ÁÈ¡´ÎÊı
+#define VOLTAGE_TIME	 20				//å®šä¹‰ç”µå‹é‡‡é›†è¯»å–æ¬¡æ•°
 
 
 
