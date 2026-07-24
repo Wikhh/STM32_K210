@@ -1,0 +1,28 @@
+# Keil / ARM build output
+**/Objects/
+**/Listings/
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.o
+*.d
+*.crf
+*.lnp
+*.dep
+*.build_log.htm
+
+# Keil per-user files
+*.uvguix.*
+
+# Python / IDE
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
